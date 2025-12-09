@@ -96,7 +96,8 @@ body {
     border-radius: var(--radius-sm);
 }
 
-.nav-link:hover {
+.nav-link:hover,
+.nav-link.active-link {
     color: var(--blue-accent);
     text-shadow: var(--glow-blue);
 }
@@ -459,6 +460,16 @@ body {
 
 .contact-item p {
     color: var(--text-secondary);
+}
+
+.contact-item a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-item a:hover {
+    color: var(--blue-accent);
 }
 
 .contact-form {
