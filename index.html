@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio personnel - Étudiant BUT MMI développement web">
+    <title>Portfolio - Étudiant BUT MMI</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">Mon Portfolio</div>
+            <button class="burger-menu" id="burgerMenu" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#hero" class="nav-link">Accueil</a></li>
+                <li><a href="#projects" class="nav-link">Projets</a></li>
+                <li><a href="#cv" class="nav-link">CV</a></li>
+                <li><a href="#motivation" class="nav-link">Lettre de motivation</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Bonjour, je suis <span class="highlight">Étudiant BUT MMI</span></h1>
+            <p class="hero-subtitle">Développeur Web passionné | Créatif & Technique</p>
+            <p class="hero-description">
+                Étudiant en BUT Métiers du Multimédia et de l'Internet, spécialisé en développement web.
+                Je crée des expériences numériques modernes et engageantes.
+            </p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn btn-primary">Voir mes projets</a>
+                <a href="#contact" class="btn btn-secondary">Me contacter</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section projects">
+        <div class="container">
+            <h2 class="section-title">Mes Projets</h2>
+            <div class="projects-grid">
+                <div class="card project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder">🌐</div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Site Web Responsive</h3>
+                        <p>Création d'un site web moderne et responsive avec HTML5, CSS3 et JavaScript vanilla.</p>
+                        <div class="project-tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder">🎨</div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Application Interactive</h3>
+                        <p>Développement d'une application web interactive avec des animations CSS et manipulation du DOM.</p>
+                        <div class="project-tags">
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">DOM</span>
+                            <span class="tag">CSS3</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder">📱</div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Design Mobile-First</h3>
+                        <p>Conception et développement d'interfaces utilisateur optimisées pour mobile et tablette.</p>
+                        <div class="project-tags">
+                            <span class="tag">Responsive</span>
+                            <span class="tag">UX/UI</span>
+                            <span class="tag">Mobile</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder">⚡</div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Performance Web</h3>
+                        <p>Optimisation de sites web pour améliorer les performances et l'accessibilité.</p>
+                        <div class="project-tags">
+                            <span class="tag">Performance</span>
+                            <span class="tag">A11y</span>
+                            <span class="tag">SEO</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CV Section -->
+    <section id="cv" class="section cv-section">
+        <div class="container">
+            <h2 class="section-title">Mon CV</h2>
+            <div class="cv-content">
+                <p class="cv-description">
+                    Découvrez mon parcours académique et mes compétences en développement web.
+                </p>
+                <button class="btn btn-primary" id="openCvModal">Voir mon CV</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Motivation Letter Generator Section -->
+    <section id="motivation" class="section motivation-section">
+        <div class="container">
+            <h2 class="section-title">Générateur de Lettre de Motivation</h2>
+            <div class="card">
+                <form id="motivationForm" class="motivation-form">
+                    <div class="form-group">
+                        <label for="companyName">Nom de l'entreprise</label>
+                        <input type="text" id="companyName" name="companyName" placeholder="Ex: Tech Corp" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="position">Poste visé</label>
+                        <input type="text" id="position" name="position" placeholder="Ex: Développeur Web Junior" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="experience">Vos expériences pertinentes</label>
+                        <textarea id="experience" name="experience" rows="3" placeholder="Décrivez vos expériences..." required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="motivation">Votre motivation</label>
+                        <textarea id="motivation" name="motivation" rows="3" placeholder="Expliquez votre motivation..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Générer la lettre</button>
+                </form>
+
+                <div id="motivationOutput" class="motivation-output" style="display: none;">
+                    <h3>Votre lettre de motivation</h3>
+                    <div id="letterContent" class="letter-content"></div>
+                    <button id="copyLetter" class="btn btn-secondary">Copier</button>
+                    <button id="resetForm" class="btn btn-outline">Nouvelle lettre</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section">
+        <div class="container">
+            <h2 class="section-title">Me Contacter</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <span class="contact-icon">📧</span>
+                        <div>
+                            <h4>Email</h4>
+                            <p>etudiant@but-mmi.fr</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">🔗</span>
+                        <div>
+                            <h4>LinkedIn</h4>
+                            <p>linkedin.com/in/etudiant-mmi</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">💻</span>
+                        <div>
+                            <h4>GitHub</h4>
+                            <p>github.com/etudiant-mmi</p>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="contact-form card" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Nom</label>
+                        <input type="text" id="name" name="name" placeholder="Votre nom" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="votre.email@exemple.fr" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Votre message..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Envoyer</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Portfolio - Étudiant BUT MMI. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <!-- CV Modal -->
+    <div id="cvModal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" id="closeCvModal" aria-label="Fermer">&times;</button>
+            <h2>Mon CV</h2>
+            <div class="pdf-container">
+                <iframe id="cvPdf" src="cv.html" title="CV"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
